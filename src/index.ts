@@ -7,7 +7,7 @@ import { FetchDB } from "./fetch";
  * @param {string} pathname - The pathname of the request URL.
  * @returns {Promise<Response>} - The response from the corresponding database operation.
  */
-export default async function pathApi<T>(DB: D1Database, table: string, pathname: string, body: T): Promise<Response> {
+export async function pathApi<T>(DB: D1Database, table: string, pathname: string, body: T): Promise<Response> {
     const db = new FetchDB<T>(DB, table, body);
     const restPathname = pathname.substring(table.length + 1);
     switch (restPathname) {
