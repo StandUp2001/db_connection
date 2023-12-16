@@ -16,7 +16,7 @@
     "scripts": {
         "build": "tsup src/ --format cjs,esm --dts",
         "lint": "tsc",
-        "publish": "pnpm publish --access public"
+        "online": "pnpm publish --access public"
     },
     "author": {
         "name": "StandUp2001"
