@@ -1,6 +1,6 @@
 {
     "name": "@standev2001/db_connection",
-    "version": "0.0.3",
+    "version": "0.0.6",
     "license": "MIT",
     "description": "A simple database connection library",
     "main": "dist/index.js",
@@ -14,9 +14,10 @@
         "url": "https://github.com/StandUp2001/db_connection"
     },
     "scripts": {
-        "build": "tsup src/ --format cjs,esm --dts",
+        "throw": "rm -rf dist",
+        "build": "pnpm throw && pnpm lint && tsup src/ --format cjs,esm --dts",
         "lint": "tsc",
-        "online": "pnpm publish --access public"
+        "online": "pnpm publish --access public --no-git-checks"
     },
     "author": {
         "name": "StandUp2001"
