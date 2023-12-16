@@ -1,4 +1,4 @@
-import { Column } from "../types";
+import { Column } from "../types/types";
 
 /**
  * Retrieves the body structure from a database table.

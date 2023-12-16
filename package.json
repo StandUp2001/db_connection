@@ -1,10 +1,11 @@
 {
     "name": "@standev2001/db_connection",
-    "version": "0.0.15",
+    "version": "0.0.17",
     "license": "MIT",
     "description": "A simple database connection library",
     "main": "dist/index.js",
     "module": "dist/index.mjs",
+    "types": "dist/index.d.ts",
     "exports": {
         ".": {
             "import": "./dist/index.mjs",
@@ -16,7 +17,8 @@
         },
         "./utils": {
             "import": "./dist/utils/index.mjs",
-            "require": "./dist/utils/index.js"
+            "require": "./dist/utils/index.js",
+            "types": "./dist/utils/index.d.ts"
         }
     },
     "files": [

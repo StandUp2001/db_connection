@@ -1,4 +1,4 @@
-import { Column } from "./types";
+import { Column } from "./types/types";
 import { getTablesInfo } from "./utils/utils";
 
 /**

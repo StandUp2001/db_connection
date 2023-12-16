@@ -13,6 +13,11 @@
     "noEmit": true,
     "types": [
       "@cloudflare/workers-types"
-    ]
+    ],
+    "baseUrl": "./",
+    "paths": {
+      "@standev2001/db_connection/types":["node_modules/@standev2001/db_connection/dist/types"],
+      "@standev2001/db_connection/utils":["node_modules/@standev2001/db_connection/dist/utils"],
+    }
   }
 }
