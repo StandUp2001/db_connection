@@ -1,5 +1,3 @@
-import { pathApi } from "./path";
-import * as utils from "./utils";
-import * as types from "./types";
-
-export { pathApi, utils, types };
+export { pathApi } from "./path";
+export { Column } from "./types";
+export { getBodyFromTable, getTablesInfo } from "./utils";

@@ -1,6 +1,6 @@
 {
     "name": "@standev2001/db_connection",
-    "version": "0.0.8",
+    "version": "0.0.10",
     "license": "MIT",
     "description": "A simple database connection library",
     "main": "dist/index.js",
@@ -9,6 +9,12 @@
     "files": [
         "dist"
     ],
+    "exports": {
+        "types": "./dist/index.d.ts",
+        "require": "./dist/index.js",
+        "import": "./dist/index.mjs",
+        "default": "./dist/index.mjs"
+    },
     "repository": {
         "type": "git",
         "url": "https://github.com/StandUp2001/db_connection"
@@ -17,7 +23,7 @@
         "throw": "rm -rf dist",
         "build": "pnpm throw && pnpm lint && tsup src/ --format cjs,esm --dts",
         "lint": "tsc",
-        "online": "pnpm publish --access public --no-git-checks"
+        "online": "pnpm build && pnpm publish --access public --no-git-checks"
     },
     "author": {
         "name": "StandUp2001"
