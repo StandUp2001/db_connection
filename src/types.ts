@@ -1,3 +1,4 @@
+/// <reference types="typescript" />
 export type Column = {
     cid: number;
     name: string;
