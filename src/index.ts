@@ -1,4 +1,6 @@
 import { FetchDB } from "./fetch";
+export { type Column, getBodyFromTable } from "./utils";
+
 
 /**
  * Handles the routing logic for different REST API endpoints.
