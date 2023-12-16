@@ -1,5 +1,5 @@
 import { Column } from "./types";
-import { getTablesInfo } from "./utils";
+import { getTablesInfo } from "./utils/utils";
 
 /**
  * Represents a class for executing statements on a database table.
