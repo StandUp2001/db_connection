@@ -1,5 +1,5 @@
 import { FetchDB } from "./fetch";
-export { type Column, getBodyFromTable } from "./utils";
+import { Column, getBodyFromTable } from "./utils";
 
 
 /**
@@ -9,7 +9,7 @@ export { type Column, getBodyFromTable } from "./utils";
  * @param {string} pathname - The pathname of the request URL.
  * @returns {Promise<Response>} - The response from the corresponding database operation.
  */
-export async function pathApi<T>(DB: D1Database, table: string, pathname: string, body: T): Promise<Response> {
+async function pathApi<T>(DB: D1Database, table: string, pathname: string, body: T): Promise<Response> {
     const db = new FetchDB<T>(DB, table, body);
     const restPathname = pathname.substring(table.length + 1);
     switch (restPathname) {
@@ -32,3 +32,5 @@ export async function pathApi<T>(DB: D1Database, table: string, pathname: string
             return new Response(`Not found: ${restPathname}`, { status: 404 });
     }
 }
+
+export { pathApi, Column, getBodyFromTable };
