@@ -1,10 +1,11 @@
+import { Column } from "../types";
+
 /**
  * Retrieves the body structure from a database table.
  * @param {string} table - The name of the table.
  * @param {D1Database} DB - The database instance.
  * @returns {Promise<any>} - The body structure of the table.
  */
-
 export async function getBodyFromTable(table: string, DB: D1Database): Promise<Record<string, string>> {
     const columns: Column[] = await getTablesInfo(table, DB);
     const body: Record<string, string> = {};
@@ -13,16 +14,6 @@ export async function getBodyFromTable(table: string, DB: D1Database): Promise<R
     }
     return body;
 }
-
-
-export type Column = {
-    cid: number;
-    name: string;
-    type: string;
-    notnull: number;
-    dflt_value: null,
-    pk: number;
-};
 
 /**
  * Retrieves information about the columns of a database table.

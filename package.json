@@ -1,6 +1,6 @@
 {
     "name": "@standev2001/db_connection",
-    "version": "0.0.6",
+    "version": "0.0.7",
     "license": "MIT",
     "description": "A simple database connection library",
     "main": "dist/index.js",
