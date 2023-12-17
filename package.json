@@ -1,6 +1,6 @@
 {
     "name": "@standev2001/db_connection",
-    "version": "0.0.17",
+    "version": "0.0.19",
     "license": "MIT",
     "description": "A simple database connection library",
     "main": "dist/index.js",
@@ -37,6 +37,12 @@
     "author": {
         "name": "StandUp2001"
     },
+    "keywords": [
+        "database",
+        "connection",
+        "cloudflare",
+        "workers"
+    ],
     "devDependencies": {
         "tsup": "^8.0.1",
         "@cloudflare/workers-types": "^4.20231121.0",

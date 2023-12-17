@@ -1,4 +1,5 @@
 import { Column } from "../types/types";
+export const jsonError = "Invalid JSON";
 
 /**
  * Retrieves the body structure from a database table.
@@ -25,4 +26,20 @@ export async function getTablesInfo(table: string, DB: D1Database): Promise<Colu
     const sql: string = `PRAGMA table_info(${table})`;
     const res: D1Result<Column> = await DB.prepare(sql).all();
     return res.results;
+}
+
+/**
+ * Retrieves the body of a request.
+ * @param {Request} req - The request object.
+ * @returns {Promise<any>} - The body of the request.
+ */
+export function getBody(req: Request): Promise<any> {
+    try {
+        if (req.body) { return req.json(); }
+        return Promise.resolve(null);
+    }
+    catch (_) {
+        return Promise.resolve(jsonError);
+    }
+
 }
